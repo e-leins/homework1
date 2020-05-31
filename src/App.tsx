@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import img from './ava.jpg';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="block-back">
+            <img src={img} alt="avatar"/>
+            <div className="block-messages"> <p className="name"> Elena Valiuk</p>
+                <p className ="message"> Наконец-то получилось!!!<span> 00.44</span></p>
+            </div>
+        </div>
+    )
 }
 
 export default App;
