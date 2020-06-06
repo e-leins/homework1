@@ -1,18 +1,30 @@
-p {
+.message1 {
     font-size: 11px;
     padding-left: 5px;
     color: cornsilk;
-
-
 }
-span {
+.time1 {
     font-size:7px;
-    padding-left: 20px;
+    padding-left: 30px;
     color: lightsteelblue;
-
 }
-.name {
+.name1 {
     font-size: 8px;
     color: lightskyblue;
+    padding-left:5px;
 }
-
+.message2 {
+    font-size: 11px;
+    padding-left: 5px;
+    color: midnightblue;
+}
+.time2 {
+    font-size:7px;
+    padding-left: 90px;
+    color: teal;
+}
+.name2 {
+    font-size: 8px;
+    color: darkslategrey;
+    padding-left:5px;
+}

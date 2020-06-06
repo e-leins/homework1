@@ -1,13 +1,13 @@
-.blockMessages {
+.blockMessages1 {
     background-color: cadetblue;
     width:190px;
-    height: 55px;
+    min-height: 55px;
     margin-left: 10px;
     margin-top: 5px;
     border-radius: 5px;
     position: relative;
 }
-.blockMessages::after {
+.blockMessages1::after {
     content: '';
     width: 0;
     height: 0;
@@ -16,5 +16,25 @@
     position: absolute;
     left: -10px;
     top: 40px;
+
+}
+.blockMessages2 {
+    background-color: aliceblue ;
+    width:190px;
+    min-height: 55px;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.blockMessages2::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid aliceblue;
+    border-right: 10px solid transparent;
+    position: absolute;
+    right: -10px;
+    bottom: 10px;
 
 }

@@ -1,6 +1,6 @@
-.blockBack{
-    display:flex;
+.blockBack {
+    display: flex;
     background-image: url("https://w-hatsapp.ru/wp-content/uploads/2015/10/fon-1-225x300.png");
-    width:240px;
-    height:65px;
+    width: 240px;
+    min-height: 65px;
 }

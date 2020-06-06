@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import {BlockBack} from "./Components/BlockBack/BlockBack";
+import {BlockBack1, BlockBack2} from "./Components/BlockBack/BlockBack";
 function App() {
     return (
         <div>
-        <BlockBack/>
-        </div>
+        <BlockBack1 />
+        <BlockBack2 />
+          </div>
     )
 }
 
