@@ -3,4 +3,6 @@ img {
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
+    align-self: flex-end;
+    margin:7px;
 }

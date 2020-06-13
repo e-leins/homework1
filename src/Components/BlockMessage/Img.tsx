@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../../ava.jpg";
+import img1 from "../../ava1.jpg";
 
 
 import classes from "./Img.module.css"
