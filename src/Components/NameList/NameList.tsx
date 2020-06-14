@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useState, KeyboardEvent} from "react";
 
 
 export type NameListType = {
@@ -11,22 +11,29 @@ export type NameType = {
 }
 
 export function NameList(props: NameListType) {
-
     const [newNameTitle,setNewNameTitle] = useState (" ");
+    const onNameChangeHandler = (event:ChangeEvent<HTMLInputElement>)=>{setNewNameTitle(event.currentTarget.value)};
+    const onKeyPressHandler = (event:KeyboardEvent<HTMLInputElement>)=> {if (event.charCode=== 13){props.addName(newNameTitle);
+        setNewNameTitle(" ")}};
+    const addNewName = ()=>{props.addName(newNameTitle);
+        setNewNameTitle(" ")};
+
     return (
         <div className="#">
-            <input value ={newNameTitle} onChange={(event)=>{setNewNameTitle(event.currentTarget.value)}}/>
+            <input value ={newNameTitle}
+                   onChange={onNameChangeHandler}
+                   onKeyPress={onKeyPressHandler}/>
             <ul>
                 {
                     props.names.map(n => <li key={n.id}>
                         <span> {n.title}</span>
-                        <button onClick={() => {props.addName(newNameTitle)}}>
+                        <button onClick={() => {addNewName()}}>
                             Add
                         </button>
                     </li>)
                 }
             </ul>
-            <span> количество</span>
+            <span> число </span>
         </div>
 
     );
