@@ -15,6 +15,7 @@ export type TaskType = {
 export function TodoList(props: TodoListType) {
     return (
         <div className="WeeklyToDo">
+
             <ul>
                 {
                     props.tasks.map(t => <li key={t.id}>
