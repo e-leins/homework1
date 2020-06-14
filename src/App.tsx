@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import './App.css';
 import {BlockBack1, BlockBack2, BlockBack3} from "./Components/BlockBack/BlockBack";
 import {v1} from "uuid";
-import {TodoList,TaskType} from "./Components/TodoList/Todolist";
+import {TodoList, TaskType} from "./Components/TodoList/Todolist";
 
-export type FilterPriorityType = "All"| "High"| "Medium"| "Low";
+export type FilterPriorityType = "All" | "High" | "Medium" | "Low";
+
 function App() {
-    let  [tasks, setTasks] = useState <Array<TaskType>> ([
+    let [tasks, setTasks] = useState<Array<TaskType>>([
         {id: v1(), title: "Job", priority: "High"},
         {id: v1(), title: "Study React", priority: "High"},
         {id: v1(), title: "Study JS", priority: "High"},
@@ -16,13 +17,15 @@ function App() {
     ]);
     let [filter, setFilter] = useState<FilterPriorityType>("All");
 
-        function removeTasks(id:string) {
+    function removeTasks(id: string) {
         let resultTasks = tasks.filter(t => t.id !== id)
-                setTasks(resultTasks);
+        setTasks(resultTasks);
     }
-    function changeFilter (value:FilterPriorityType){
-            setFilter(value)
+
+    function changeFilter(value: FilterPriorityType) {
+        setFilter(value)
     }
+
     let tasksTodolist = tasks;
     if (filter === "High") {
         tasksTodolist = tasks.filter(t => t.priority === "High");
@@ -34,15 +37,16 @@ function App() {
     if (filter === "Low") {
         tasksTodolist = tasks.filter(t => t.priority === "Low");
     }
-        return (
+
+    return (
         <div>
             <BlockBack1/>
             <BlockBack2/>
             <BlockBack3/>
             <TodoList tasks={tasksTodolist}
-            removeTasks={removeTasks}
-                      changeFilter ={changeFilter}
-            />
+                      removeTasks={removeTasks}
+                      changeFilter={changeFilter}/>
+
         </div>
     )
 }
